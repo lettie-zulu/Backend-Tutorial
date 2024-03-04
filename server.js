@@ -8,7 +8,7 @@ const cors = require("cors");
 const app = express()
 
 var corsOptions = {
-    origin: "http://localhost:8001"
+    origin: "http://localhost:8081"
 };
 
 app.use(cors(corsOptions));
@@ -34,7 +34,7 @@ db.mongoose.connect(db.url,{
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to Natasha's Tutorial application." });
+  res.json({ message: "Welcome to Lettie's Tutorial application." });
 });
 
 require("./routes/tutorial.routes")(app);
